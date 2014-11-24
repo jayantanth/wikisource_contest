@@ -49,7 +49,7 @@
     """
     Put your local last page of books in the right order. ex: Foggerty.djvu is 376"
     """
-    end = [427, 436, ]
+    end = [427, 436, 451, 444, 462, 496, 228, 668, 174, 394, 312, 256]
     i = 0
     for llibre in llibres:
             for pag in range(begin, end[i]+1):
