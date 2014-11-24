@@ -56,7 +56,7 @@
                     params = {
                                     'action'        :'query',
                                     'prop'          :'revisions',
-                                    'titles'        :u'Pàgina:%s/%d' % (llibre, pag),
+                                    'titles'        :u'Pàgina:%s/%d' % (book, pag),
                                     'rvlimit'       :'50',
                                     'rvprop'        :'user|timestamp|content',
                     }
@@ -76,7 +76,7 @@
                             a = int(a)
                             b = user
                             if a == 3 and old < 3 and data >= datetime(2014, 11, 24, 0, 0, 0) and data < datetime(2014, 12, 2, 0, 0, 0):
-                                    print u"Book %s" % llibre
+                                    print u"Book %s" % book
                                     print u"%s proofreads the page %d." % (b, pag)
                                     if old == None: print u"Page doesn't exist before."
                                     else: print u"Page change from %d to %d quality." % (old, a)
