@@ -31,7 +31,7 @@ import pywikibot as wikipedia
 #import query as query
 import pywikibot.data.api
  
-site = wikipedia.Site('ca','wikisource')
+site = wikipedia.Site('it','wikisource')
 punts = {}
 vali = {}
 revi = {}
