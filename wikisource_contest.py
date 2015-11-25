@@ -35,12 +35,12 @@ site = wikipedia.Site('it','wikisource')
 punts = {}
 vali = {}
 revi = {}
-llibres = [u'Patria Esercito Re.djvu', u'Operette morali.djvu', u'Zibaldone di pensieri IV.djvu', u'Zibaldone di pensiieri V.djvu', u'Zibaldone di pensieri VI.djvu', u'Zibaldone di pensieri VII.djvu', u'Rime (Cavalcanti).djvu', u'Eneide (Caro).djvu', u'I colloqui.djvu', u'Ultime lettere di Jacopo Ortis.djvu', u'Canne al vento.djvu', u'Il podere.djvu', u'Cuore (1889).djvu', u'Lettere sulla Alceste seconda (Bettoni 1808).djvu', u'Verri - Meditazioni sulla economia politica, 1771.pdf', u'Vasco - Della moneta, 1788.djvu', u'Delle cinque piaghe della Santa Chiesa (Rosmini).djvu', u'Così parlò Zarathustra.djvu', u'Sopra lo amore.djvu', u'Saul.djvu', u'Manuale 150 ricette di cucina di guerra.djvu']
+llibres = [u'Bandello - Novelle, Laterza 1910, I.djvu', u'Fior di Sardegna (Racconti).djvu', u'Racconti sardi.djvu', u'Slataper - Il mio carso, 1912.djvu', u"D'Annunzio - Il libro delle vergini.djvu", u'Basile - Lu cunto de li cunti, Vol.I.djvu', u'Zibaldone di pensieri IV.djvu', u'Zibaldone di pensieri V.djvu', u'Zibaldone di pensieri VI.djvu', u'Zibaldone di pensieri VII.djvu', u'Operette morali.djvu', u'Rime (Andreini).djvu', u'Rime (Cavalcanti).djvu', u'Eneide (Caro).djvu', u'Commedia - Inferno (Buti).djvu', u'La Natura.djvu', u'Omero minore.djvu', u'Con gli occhi chiusi.djvu', u'Ultime lettere di Jacopo Ortis.djvu', u"Deledda - Il sigillo d'amore, 1926.djvu", u'Deledda - Le colpe altrui.djvu', u'Sino al confine.djvu', u'La capanna dello zio Tom, 1871.djvu', u'Serra - Scritti, Le Monnier, 1938, I.djvu', u'Rivista di Scienza - Vol. II.djvu', u'Vasco - Della moneta, 1788.djvu', u'Sopra lo amore.djvu', u"L'Anticristo.djvu", u'Il crepuscolo degli idoli.djvu', u'Bruno - Cena de le ceneri.djvu', u'Ecce Homo (1922).djvu', u'Saul.djvu', u'Verginia.djvu', u'Tebaldo e Isolina.djvu', u'Le nebule.djvu', u'Mirtilla.djvu', u'Le congreganti.djvu', u'Marinetti - La cucina futurista, 1932.djvu', u'Interiano - La vita et sito de Zychi, Aldo, 1502.djvu', u'Nicolò Toneatti - Guida del viaggiatore per la città e per li dintorni di Trento, 1837.djvu', u'Rosselli - Epulario, 1643.djvu', u'Fineo - Il rimedio infallibile.djvu', u'Trattato della neve e del bere fresco.djvu']
 begin = 1
 """
 Put your local last page of books in the right order. ex: Foggerty.djvu is 376"
 """
-end = [427, 436, 451, 444, 462, 496, 228, 668, 174, 394, 312, 256, 338, 104, 273, 208, 144, 312, 170, 92, 84]
+end = []
 if len(llibres) == len(end):
         print "OK, they're the same"
 i = 0
@@ -55,7 +55,7 @@ for llibre in llibres:
                                 'rvlimit'   :'50',
                                 'rvprop'        :'user|timestamp|content',
                 }
-                data = pywikibot.data.api.CachedRequest(0, site=site, **params).submit() #data = pywikibot.data.api.CachedRequest(5, **params).submit()
+                data = pywikibot.data.api.CachedRequest(5, **params).submit() #data = pywikibot.data.api.CachedRequest(0, site=site, **params).submit() 
                 try:    
                         revs = data["query"]["pages"].values()[0]["revisions"][::-1]
                 except KeyError:
