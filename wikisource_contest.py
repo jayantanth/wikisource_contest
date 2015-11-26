@@ -40,7 +40,7 @@ begin = 1
 """
 Put your local last page of books in the right order. ex: Foggerty.djvu is 376"
 """
-end = []
+end = [426, 196, 168, 124, 184, 511, 451, 444, 462, 496, 436, 328, 228, 668, 909, 410, 222| romanzi]
 if len(llibres) == len(end):
         print "OK, they're the same"
 i = 0
