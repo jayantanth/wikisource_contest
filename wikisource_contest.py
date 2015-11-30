@@ -70,21 +70,21 @@ for llibre in llibres:
                         a,b = re.findall('<pagequality level="(\d)" user="(.*?)" />', txt)[0]
                         a = int(a)
                         b = user
-                        if a == 3 and old < 3 and data >= datetime(2014, 11, 24, 0, 0, 0) and data < datetime(2014, 12, 2, 0, 0, 0):
+                        if a == 3 and old < 3 and data >= datetime(2015, 11, 23, 0, 0, 0) and data < datetime(2015, 12, 8, 0, 0, 0):
                                 print u"%s proofreads the page %d." % (b, pag)
                                 if old == None: print u"Page doesn't exist before."
                                 punts[b] = punts.get(b, 0)+2
                                 revi[b] = revi.get(b, 0)+1
-                        if a == 3 and old == 4 and data >= datetime(2014, 11, 24, 0, 0, 0) and data < datetime(2014, 12, 2, 0, 0, 0):
-                                if (oldData >= datetime(2014, 11, 14, 0, 0, 0) and oldData < datetime(2014, 11, 25, 0, 0, 0)):
+                        if a == 3 and old == 4 and data >= datetime(2015, 11, 23, 0, 0, 0) and data < datetime(2015, 12, 8, 0, 0, 0):
+                                if (oldData >= datetime(2015, 11, 23, 0, 0, 0) and oldData < datetime(2015, 11, 24, 0, 0, 0)):
                                         punts[oldUser] = punts.get(oldUser, 0)-1
                                         vali[oldUser] = vali.get(oldUser, 0)-1
-                        if a == 4 and old == 3 and data >= datetime(2014, 11, 24, 0, 0, 0) and data < datetime(2014, 12, 2, 0, 0, 0):
+                        if a == 4 and old == 3 and data >= datetime(2015, 11, 23, 0, 0, 0) and data < datetime(2015, 12, 8, 0, 0, 0):
                                 print u"%s validates page %d." % (b, pag)
                                 punts[b] = punts.get(b, 0)+1
                                 vali[b] = vali.get(b, 0)+1
-                        if a < 3 and old == 3 and data >= datetime(2014, 11, 24, 0, 0, 0) and data < datetime(2014, 12, 2, 0, 0, 0):
-                                if (oldData >= datetime(2014, 11, 24, 0, 0, 0) and oldData < datetime(2014, 12, 2, 0, 0, 0)):
+                        if a < 3 and old == 3 and data >= datetime(2015, 11, 23, 0, 0, 0) and data < datetime(2015, 12, 8, 0, 0, 0):
+                                if (oldData >= datetime(2015, 11, 23, 0, 0, 0) and oldData < datetime(2015, 12, 8, 0, 0, 0)):
                                         punts[oldUser] = punts.get(oldUser, 0)-2
                                         revi[oldUser] = vali.get(oldUser, 0)-1
                                        
